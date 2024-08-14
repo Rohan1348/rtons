@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createOrder } from "../services/api";
 
-const OrderCreation: React.FC<{ username: String; onOrderCreated: () => void; }> = ({ username, onOrderCreated }) => {
+const OrderCreation: React.FC<{ username: String; }> = ({ username }) => {
   const [items, setItems] = useState("");
   const [totalAmount, setTotalAmount] = useState<number>(0);
   const [message, setMessage] = useState<string | null>(null);
@@ -15,7 +15,6 @@ const OrderCreation: React.FC<{ username: String; onOrderCreated: () => void; }>
       // Reset form
       setItems("");
       setTotalAmount(0);
-      onOrderCreated();
     } catch (error) {
       setMessage("Failed to create order");
     }

@@ -5,7 +5,6 @@ import Notification from '../components/Notification';
 import { Order } from '../types/types';
 import { setupWebSocket } from '../services/websocketService';
 import OrderCreation from '../components/OrderCreation';
-// import axios from 'axios';
 import { fetchOrders } from '../services/api';
 
 const Dashboard: React.FC<{ username: String }> = ({ username }) => {
@@ -43,6 +42,11 @@ const Dashboard: React.FC<{ username: String }> = ({ username }) => {
     useEffect(() => {
         if (notification) {
             setShowNotification(true);
+            const loadOrders = async () => {
+                const fetchedOrders = await fetchOrders();
+                setOrders(fetchedOrders);
+            };
+            loadOrders();
 
             const timer = setTimeout(() => {
                 setShowNotification(false);
@@ -70,7 +74,7 @@ const Dashboard: React.FC<{ username: String }> = ({ username }) => {
     return (
         <div>
             <h1>{capitalizeFirstLetter(username)}'s Dashboard</h1>
-            <OrderCreation username={capitalizeFirstLetter(username)} onOrderCreated={() => setOrdersUpdated(!ordersUpdated)}/>
+            <OrderCreation username={capitalizeFirstLetter(username)}/>
             {username === "admin" && <OrderList onSelectOrder={setSelectedOrder} orders={orders}/>}
             {username === "admin" && selectedOrder && <OrderDetails order={selectedOrder} onUpdate={handleUpdate} onDelete={handleDelete} />}
             {showNotification && username === "admin" && notification && <Notification message={notification} />}
