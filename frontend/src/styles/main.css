@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 70px;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3 {
+    margin: 0 0 20px 0;
+}
+
+.notification {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+/* app styles */
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .auth-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .auth-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .auth-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .auth-error {
+    margin-top: 15px;
+    color: #e74c3c;
+    font-size: 14px;
+  }
+  
+  .toggle-button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .toggle-button:hover {
+    color: #0056b3;
+  }
+  
+  /* Dashboard styles */
+.order-creation-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.order-creation-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+    color: #333;
+}
+
+.order-creation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-creation-input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.order-creation-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-creation-button:hover {
+    background-color: #0056b3;
+}
+
+.order-creation-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #28a745;
+    text-align: center;
+}
+
+/* Logout button styling */
+.logout-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.logout-button:active {
+  background-color: #bd2130;
+  transform: scale(0.98);
+}
+
+/* orderlist */
+.orders-container {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orders-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.no-orders-message {
+  font-size: 18px;
+  color: #999;
+}
+
+.orders-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.order-item:hover {
+  background-color: #e9ecef;
+}
+
+.order-item:active {
+  background-color: #dee2e6;
+  transform: scale(0.98);
+}
+
+/* order details */
+.order-details-container {
+  padding: 20px;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Details heading styling */
+.order-details-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+.order-details-text {
+  font-size: 18px;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.order-details-buttons {
+  margin-top: 20px;
+}
+
+.order-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.process-button {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.process-button:hover {
+  background-color: #e0a800;
+}
+
+.complete-button {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.complete-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
