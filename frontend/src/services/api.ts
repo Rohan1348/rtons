@@ -18,6 +18,23 @@ export const fetchOrders = async (): Promise<Order[]> => {
     return response.data;
 };
 
+export const fetchUserOrders = async (): Promise<Order[]> => {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+        console.error('No token found');
+    }
+
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    };
+
+    const response = await axios.get(`${API_URL}/userOrders`, config);
+    return response.data;
+};
+
 export const createOrder = async (customerName: String, items: string[], totalAmount: number) => {
     const token = localStorage.getItem('token');
 

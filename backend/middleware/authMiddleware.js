@@ -27,7 +27,7 @@ exports.protect = async (req, res, next) => {
 
 
 exports.admin = (req, res, next) => {
-    console.log("admin middleware")
+    // console.log("admin middleware")
     if (req.user && req.user.role === 'admin') {
         next();
     } else {

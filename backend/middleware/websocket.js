@@ -21,3 +21,21 @@ exports.notifyAdmin = (order) => {
         io.emit('newOrder', order);
     }
 };
+
+exports.createdOrder = () => {
+    if (io) {
+        io.emit('orderCreated');
+    }
+};
+
+exports.updatedOrder = (order) => {
+    if (io) {
+        io.emit('orderUpdated', order);
+    }
+};
+
+exports.deletedOrder = (order) => {
+    if (io) {
+        io.emit('orderDeleted', order._id);
+    }
+};

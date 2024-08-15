@@ -15,13 +15,13 @@ const OrderList: React.FC<{
         ""
       )}
       <ul className="orders-list">
-        {orders.map((order) => (
+        {orders.map((order, i) => (
           <li
             key={order._id}
             className="order-item"
             onClick={() => onSelectOrder(order)}
           >
-            {order.customerName} - {order.status}
+            {i+1}. {order.customerName} - {order.status}
           </li>
         ))}
       </ul>
