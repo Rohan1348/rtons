@@ -1,3 +1,9 @@
+# Real Time Order Notification System
+App to Notify Admin of newly created order in real time. Admin also having option to update status and delete order.
+
+<img src="/frontend/public/rtons1.png" width="200" height="100">
+<img src="/frontend/public/rtons2.png" width="200" height="100">
+
 # Getting Started with the Installation
 
 for backend
